@@ -8,13 +8,16 @@
 
 	<h1>Person details</h1>
 
-	<p th:text="${person.getName()}"></p>
-	<p th:text="${person.getId()}"></p>
+	<span>user ID: </span><span th:text="${person.getId()}"></span><br />
+	<span>user Name: </span><span th:text="${person.getName()}"></span><br />
+	<span>user Age: </span><span th:text="${person.getAge()}"></span><br />
+	<span>user Email: </span><span th:text="${person.getEmail()}"></span><br />
 
 	<br />
 
 	<a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
 
+	<br />
 	<br />
 
 	<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
